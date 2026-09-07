@@ -1,0 +1,435 @@
+
+/* =========================================
+   COLOR PALETTE
+   ========================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+
+    --background: #f1f5f9;
+    --white: #ffffff;
+
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --border: #cbd5e1;
+
+    --table-row: #f8fafc;
+    --table-hover: #dbeafe;
+}
+
+
+/* =========================================
+   GENERAL PAGE STYLING
+   ========================================= */
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background-color: var(--background);
+
+    color: var(--text);
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1,
+h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+#page-header {
+    background-color: var(--primary);
+
+    color: var(--white);
+
+    max-width: 900px;
+
+    margin: 25px auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border: 1px solid var(--primary-dark);
+
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* Header Image */
+
+#page-header img {
+    display: block;
+
+    margin: 0 auto 15px;
+}
+
+
+/* Main Heading */
+
+h1 {
+    font-size: 36px;
+
+    margin: 10px 0;
+}
+
+
+/* Header Paragraph */
+
+#page-header p {
+    font-size: 16px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   ADD EXPENSE FORM CARD
+   ========================================= */
+
+.add-expense-section {
+    background-color: var(--white);
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* Form Heading */
+
+.add-expense-section h2 {
+    color: var(--primary);
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+/* Direct child selector */
+
+.add-expense-section > form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Labels */
+
+label {
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS AND SELECT
+   ========================================= */
+
+input,
+select {
+    font-family: "Inter", sans-serif;
+
+    width: 100%;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    color: var(--text);
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+
+/* Negation pseudo-class */
+
+input:not([type="submit"]) {
+    background-color: var(--white);
+}
+
+
+/* Focus pseudo-class */
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--primary);
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+button {
+    font-family: "Inter", sans-serif;
+
+    margin-top: 22px;
+
+    padding: 13px;
+
+    background-color: var(--primary);
+
+    color: var(--white);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Button Hover */
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* =========================================
+   EXPENSE TABLE CARD
+   ========================================= */
+
+.expenses-section {
+    background-color: var(--white);
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* Expenses Heading */
+
+.expenses-section h2 {
+    color: var(--primary);
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    border: 1px solid var(--border);
+}
+
+
+/* Table Cells */
+
+th,
+td {
+    padding: 14px;
+
+    border: 1px solid var(--border);
+
+    text-align: left;
+}
+
+
+/* Table Header */
+
+th {
+    background-color: var(--primary);
+
+    color: var(--white);
+
+    font-weight: 600;
+}
+
+
+/* Descendant selector */
+
+.expenses-section td {
+    padding: 14px;
+}
+
+
+/* Alternating Row Colors */
+
+tr:nth-child(even) {
+    background-color: var(--table-row);
+}
+
+
+/* Table Row Hover */
+
+tbody tr:hover {
+    background-color: var(--table-hover);
+}
+
+
+/* =========================================
+   HELP SECTION
+   ========================================= */
+
+.help-section {
+    background-color: var(--white);
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* Summary */
+
+summary {
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   VIDEO SECTION
+   ========================================= */
+
+.video-section {
+    background-color: var(--white);
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* Video Heading */
+
+.video-section h2 {
+    color: var(--primary);
+
+    margin-top: 0;
+}
+
+
+/* Video */
+
+.video-section iframe {
+    max-width: 100%;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    #page-header,
+    .add-expense-section,
+    .expenses-section,
+    .help-section,
+    .video-section {
+
+        margin-left: 15px;
+
+        margin-right: 15px;
+    }
+
+
+    .expenses-section {
+        overflow-x: auto;
+    }
+
+
+    h1 {
+        font-size: 28px;
+    }
+
+
+    th,
+    td {
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+}
